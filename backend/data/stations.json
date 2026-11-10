@@ -1,0 +1,114 @@
+{
+  "info": [
+    "DEMO dati: visas cenas ir izdomātas. Rediģē šo failu, lai mainītu stacijas un cenas; backend to pārlasa, kad fails mainās.",
+    "chain: circlek | virsi | neste | viada | straujupite | kool | other. stationType: automated | staffed | unknown.",
+    "fuel: PETROL_95 | PETROL_98 | DIESEL | LPG. Cena EUR/L: degvielai 0.8–3.5, LPG 0.5–2.0. effectiveDate: YYYY-MM-DD.",
+    "observations ir cenu vēsture: jaunākais ieraksts katrai degvielai ir aktuālā cena, iepriekšējie veido grafiku.",
+    "Ieraksts ar stationId attiecas uz vienu staciju; ieraksts ar networkWide: true un chain attiecas uz visām tīkla stacijām ar šo degvielu.",
+    "Stacijām bez cenas tiek rādīta aplēse (mediāna). estimateOffsetsCents pieskaita centus aplēsēm konkrētam tīklam."
+  ],
+  "sources": [
+    { "chain": "circlek", "label": "Circle K", "updatedAt": "2026-11-10", "url": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "chain": "virsi", "label": "Virši", "updatedAt": "2026-11-09", "url": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "chain": "viada", "label": "Viada", "updatedAt": "2026-11-10", "url": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "chain": "straujupite", "label": "Straujupīte", "updatedAt": "2026-11-09", "url": "https://straujupite.lv/degvielas-cenas/" },
+    { "chain": "neste", "label": "Neste", "note": "oficiālo cenu nav kopš 10.08.2026" },
+    { "chain": "kool", "label": "Kool", "note": "publisku cenu nav" }
+  ],
+  "estimateOffsetsCents": {
+    "circlek": 0, "virsi": 0, "neste": 0, "viada": 0, "straujupite": 0, "kool": 0, "other": 0
+  },
+  "stations": [
+    { "id": "ck-brivibas-265", "name": "Circle K Brīvības 265", "chain": "circlek", "stationType": "staffed",
+      "address": "Brīvības gatve 265, Rīga", "latitude": 56.9871, "longitude": 24.1832, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "ck-brivibas-203", "name": "Circle K Brīvības 203", "chain": "circlek", "stationType": "staffed",
+      "address": "Brīvības gatve 203, Rīga", "latitude": 56.9762, "longitude": 24.1661, "fuels": ["PETROL_95", "PETROL_98", "DIESEL"] },
+    { "id": "ck-vienibas-105", "name": "Circle K Vienības", "chain": "circlek", "stationType": "staffed",
+      "address": "Vienības gatve 105, Rīga", "latitude": 56.9228, "longitude": 24.0873, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "ck-krasta-93", "name": "Circle K Krasta", "chain": "circlek", "stationType": "staffed",
+      "address": "Krasta iela 93, Rīga", "latitude": 56.9241, "longitude": 24.1702, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "ck-jelgava", "name": "Circle K Jelgava", "chain": "circlek", "stationType": "staffed",
+      "address": "Rīgas iela 46, Jelgava", "latitude": 56.6561, "longitude": 23.7468, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "ck-valmiera-auto", "name": "Circle K Automāts Valmiera", "chain": "circlek", "stationType": "automated",
+      "address": "Rīgas iela 91, Valmiera", "latitude": 57.5312, "longitude": 25.4061, "fuels": ["PETROL_95", "DIESEL"] },
+    { "id": "ck-daugavpils", "name": "Circle K Daugavpils", "chain": "circlek", "stationType": "staffed",
+      "address": "Cietokšņa iela 62, Daugavpils", "latitude": 55.8832, "longitude": 26.5301, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+
+    { "id": "virsi-brivibas-297", "name": "Virši Brīvības 297", "chain": "virsi", "stationType": "staffed",
+      "address": "Brīvības gatve 297, Rīga", "latitude": 56.9893, "longitude": 24.1879, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "virsi-ulbrokas", "name": "Virši Ulbrokas", "chain": "virsi", "stationType": "staffed",
+      "address": "Ulbrokas iela 2, Rīga", "latitude": 56.9421, "longitude": 24.2281, "fuels": ["PETROL_95", "DIESEL", "LPG"] },
+    { "id": "virsi-cesis", "name": "Virši Cēsis", "chain": "virsi", "stationType": "staffed",
+      "address": "Valmieras iela 1, Cēsis", "latitude": 57.3171, "longitude": 25.2849, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "virsi-liepaja-auto", "name": "Virši Liepāja (automāts)", "chain": "virsi", "stationType": "automated",
+      "address": "Ganību iela 120, Liepāja", "latitude": 56.5181, "longitude": 21.0172, "fuels": ["PETROL_95", "DIESEL", "LPG"] },
+    { "id": "virsi-ogre-auto", "name": "Virši Ogre (automāts)", "chain": "virsi", "stationType": "automated",
+      "address": "Rīgas iela 2, Ogre", "latitude": 56.8159, "longitude": 24.5951, "fuels": ["PETROL_95", "DIESEL"] },
+
+    { "id": "neste-ulmana", "name": "Neste Ulmaņa", "chain": "neste", "stationType": "staffed",
+      "address": "Kārļa Ulmaņa gatve 88, Rīga", "latitude": 56.9332, "longitude": 24.0421, "fuels": ["PETROL_95", "PETROL_98", "DIESEL"] },
+    { "id": "neste-mukusalas", "name": "Neste Mūkusalas", "chain": "neste", "stationType": "staffed",
+      "address": "Mūkusalas iela 41, Rīga", "latitude": 56.9301, "longitude": 24.1149, "fuels": ["PETROL_95", "PETROL_98", "DIESEL"] },
+    { "id": "neste-ventspils-auto", "name": "Neste Ventspils (automāts)", "chain": "neste", "stationType": "automated",
+      "address": "Talsu iela 31, Ventspils", "latitude": 57.3942, "longitude": 21.5899, "fuels": ["PETROL_95", "DIESEL"] },
+
+    { "id": "viada-ulmana-auto", "name": "Viada ADUS Ulmaņa", "chain": "viada", "stationType": "automated",
+      "address": "Kārļa Ulmaņa gatve 67, Rīga", "latitude": 56.9371, "longitude": 24.0562, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "viada-valdeku-auto", "name": "Viada ADUS Valdeķu", "chain": "viada", "stationType": "automated",
+      "address": "Valdeķu iela 34, Rīga", "latitude": 56.9052, "longitude": 24.1108, "fuels": ["PETROL_95", "PETROL_98", "DIESEL", "LPG"] },
+    { "id": "viada-darzciema", "name": "Viada Dārzciema", "chain": "viada", "stationType": "staffed",
+      "address": "Dārzciema iela 69, Rīga", "latitude": 56.9561, "longitude": 24.1879, "fuels": ["PETROL_95", "DIESEL"] },
+
+    { "id": "straujupite-tukums", "name": "Straujupīte Tukums", "chain": "straujupite", "stationType": "staffed",
+      "address": "Rīgas-Ventspils šosejas 56.km, Slampes pag.", "latitude": 56.9162, "longitude": 23.3230, "fuels": ["PETROL_95", "PETROL_98", "DIESEL"] },
+    { "id": "straujupite-ainazi", "name": "Straujupīte Ainaži", "chain": "straujupite", "stationType": "staffed",
+      "address": "Ainaži, Salacgrīvas nov.", "latitude": 57.8641, "longitude": 24.3601, "fuels": ["PETROL_95", "DIESEL"] },
+    { "id": "straujupite-udens-auto", "name": "Straujupīte Ūdens (automāts)", "chain": "straujupite", "stationType": "automated",
+      "address": "Ūdens iela 29, Rīga", "latitude": 56.9576, "longitude": 24.0717, "fuels": ["PETROL_95", "PETROL_98", "DIESEL"] },
+    { "id": "straujupite-krustpils", "name": "Straujupīte Krustpils", "chain": "straujupite", "stationType": "staffed",
+      "address": "Krustpils iela 6A, Rīga", "latitude": 56.9267, "longitude": 24.1839, "fuels": ["PETROL_95", "DIESEL", "LPG"] },
+
+    { "id": "kool-rezekne", "name": "Kool Rēzekne", "chain": "kool", "stationType": "staffed",
+      "address": "Atbrīvošanas aleja 155, Rēzekne", "latitude": 56.5102, "longitude": 27.3298, "fuels": ["PETROL_95", "DIESEL", "LPG"] },
+    { "id": "kool-jekabpils-auto", "name": "Kool Jēkabpils (automāts)", "chain": "kool", "stationType": "automated",
+      "address": "Brīvības iela 210, Jēkabpils", "latitude": 56.4992, "longitude": 25.8601, "fuels": ["PETROL_95", "DIESEL"] },
+
+    { "id": "other-sigulda", "name": "DUS Sigulda", "chain": "other", "stationType": "unknown",
+      "address": "Vidzemes šoseja 16, Sigulda", "latitude": 57.1531, "longitude": 24.8562, "fuels": ["PETROL_95", "DIESEL"] }
+  ],
+  "observations": [
+    { "stationId": "ck-brivibas-265", "fuel": "PETROL_95", "price": 1.819, "effectiveDate": "2026-11-06", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "PETROL_95", "price": 1.809, "effectiveDate": "2026-11-08", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "PETROL_95", "price": 1.789, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "PETROL_98", "price": 1.859, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "DIESEL", "price": 2.029, "effectiveDate": "2026-11-06", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "DIESEL", "price": 2.019, "effectiveDate": "2026-11-08", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-265", "fuel": "DIESEL", "price": 1.999, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-203", "fuel": "PETROL_95", "price": 1.789, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-203", "fuel": "PETROL_98", "price": 1.859, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-brivibas-203", "fuel": "DIESEL", "price": 1.999, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-vienibas-105", "fuel": "LPG", "price": 1.059, "effectiveDate": "2026-11-07", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+    { "stationId": "ck-vienibas-105", "fuel": "LPG", "price": 1.049, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.circlek.lv/degviela-miles/degvielas-cenas" },
+
+    { "stationId": "virsi-brivibas-297", "fuel": "PETROL_95", "price": 1.799, "effectiveDate": "2026-11-05", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "stationId": "virsi-brivibas-297", "fuel": "PETROL_95", "price": 1.789, "effectiveDate": "2026-11-07", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "stationId": "virsi-brivibas-297", "fuel": "PETROL_95", "price": 1.779, "effectiveDate": "2026-11-09", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "stationId": "virsi-brivibas-297", "fuel": "PETROL_98", "price": 1.849, "effectiveDate": "2026-11-09", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "stationId": "virsi-brivibas-297", "fuel": "DIESEL", "price": 1.989, "effectiveDate": "2026-11-09", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+    { "chain": "virsi", "networkWide": true, "fuel": "LPG", "price": 1.039, "effectiveDate": "2026-11-09", "sourceUrl": "https://www.virsi.lv/lv/privatpersonam/degviela/degvielas-un-elektrouzlades-cenas" },
+
+    { "stationId": "viada-ulmana-auto", "fuel": "PETROL_95", "price": 1.759, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-ulmana-auto", "fuel": "PETROL_98", "price": 1.829, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-ulmana-auto", "fuel": "LPG", "price": 0.989, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-valdeku-auto", "fuel": "PETROL_95", "price": 1.759, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-valdeku-auto", "fuel": "DIESEL", "price": 1.949, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-valdeku-auto", "fuel": "LPG", "price": 0.989, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+    { "stationId": "viada-darzciema", "fuel": "DIESEL", "price": 2.019, "effectiveDate": "2026-11-10", "sourceUrl": "https://www.viada.lv/zemakas-degvielas-cenas/" },
+
+    { "stationId": "straujupite-tukums", "fuel": "PETROL_95", "price": 1.769, "effectiveDate": "2026-11-05", "sourceUrl": "https://straujupite.lv/degvielas-cenas/" },
+    { "stationId": "straujupite-tukums", "fuel": "PETROL_95", "price": 1.749, "effectiveDate": "2026-11-09", "sourceUrl": "https://straujupite.lv/degvielas-cenas/" },
+    { "stationId": "straujupite-tukums", "fuel": "DIESEL", "price": 1.939, "effectiveDate": "2026-11-09", "sourceUrl": "https://straujupite.lv/degvielas-cenas/" },
+    { "stationId": "straujupite-ainazi", "fuel": "PETROL_95", "price": 1.749, "effectiveDate": "2026-11-09", "sourceUrl": "https://straujupite.lv/degvielas-cenas/" },
+    { "stationId": "straujupite-ainazi", "fuel": "DIESEL", "price": 1.939, "effectiveDate": "2026-11-09", "sourceUrl": "https://straujupite.lv/degvielas-cenas/" }
+  ]
+}
