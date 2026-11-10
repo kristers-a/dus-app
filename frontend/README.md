@@ -1,59 +1,68 @@
-# Frontend
+# DUS ATLAS
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.4.
+"DUSOTĀJS" The Angular app shows stations on a Leaflet map. The Spring Boot API stores users, stations, and price suggestions in MongoDB.
 
-## Development server
+## Requirements
 
-To start a local development server, run:
+- Docker Desktop
+- JDK 21 (Eclipse Temurin)
+- Node.js 22.22.3 or newer
 
-```bash
-ng serve
+## Setup
+
+1. Start Docker Desktop, then create the database:
+
+   ```powershell
+   docker run -d --name dus-mongo -p 127.0.0.1:27017:27017 -v dus-mongo-data:/data/db --restart unless-stopped mongo:8
+   ```
+
+   If the container already exists: `docker start dus-mongo`
+
+2. Create the backend env file:
+
+   ```powershell
+   Copy-Item backend\.env.example backend\.env
+   ```
+
+3. Install the frontend packages:
+
+   ```powershell
+   cd frontend
+   npm install
+   ```
+
+## Run
+
+Use two terminals and leave both open.
+
+```powershell
+cd backend
+.\mvnw.cmd spring-boot:run "-Dspring-boot.run.profiles=local"
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```powershell
+cd frontend
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Open http://localhost:4200. The dev server proxies `/api` to http://127.0.0.1:8080.
 
-```bash
-ng generate --help
-```
+| Username | Password | Role |
+|---|---|---|
+| admin | ChangeMe-Strong123 | ADMIN |
+| moderator | Moderator-Demo123 | MODERATOR |
+| user | User-Demo12345 | USER |
 
-## Building
+These match `backend/.env.example`. Change them in `backend/.env` before the first backend start. Existing usernames are not updated.
 
-To build the project run:
+## What each role can do
 
-```bash
-ng build
-```
+- **USER:** map and submit a price suggestion.
+- **MODERATOR:** that, plus Piedāvājumi (approve, reject, or save a price directly).
+- **ADMIN:** that, plus Lietotāji (create accounts).
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Data
 
-## Running unit tests
+Edit `backend/data/stations.json` to change the starter stations and prices. The backend reloads the file when it changes and replaces the station list in MongoDB. Prices saved through Piedāvājumi stay until the file is edited again.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`DUS_DATA_FILE` overrides the file path. It defaults to `data/stations.json`, relative to the `backend` directory.
