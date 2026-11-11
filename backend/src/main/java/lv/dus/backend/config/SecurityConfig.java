@@ -20,7 +20,7 @@ public class SecurityConfig {
     @Bean SecurityFilterChain security(HttpSecurity http) throws Exception {
         http.csrf(c -> c.csrfTokenRepository(new HttpSessionCsrfTokenRepository()))
             .authorizeHttpRequests(a -> a
-                .requestMatchers("/api/auth/csrf", "/api/auth/login", "/error").permitAll()
+                .requestMatchers("/api/auth/csrf", "/api/auth/login", "/api/auth/register", "/error").permitAll()
                 .requestMatchers("/api/users/**").hasRole("ADMIN")
                 .requestMatchers("/api/moderation/**").hasAnyRole("ADMIN", "MODERATOR")
                 .anyRequest().authenticated())

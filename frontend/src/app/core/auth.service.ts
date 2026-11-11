@@ -11,6 +11,9 @@ export class AuthService {
     const body=new HttpParams().set('username',username).set('password',password);
     return this.http.post('/api/auth/login',body).pipe(switchMap(()=>this.load()));
   }
+  register(username:string,password:string) {
+    return this.http.post('/api/auth/register',{username,password}).pipe(switchMap(()=>this.login(username,password)));
+  }
   logout() { return this.http.post('/api/auth/logout',{}).pipe(tap(()=>this.user.set(null))); }
   get canModerate() { return ['ADMIN','MODERATOR'].includes(this.user()?.role ?? ''); }
 }
