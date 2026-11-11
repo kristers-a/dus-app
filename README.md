@@ -1,3 +1,5 @@
+# THIS IS A PROTOTYPE MADE PURELY FOR EDUCATIONAL PURPOSES
+
 # DUS ATLAS
 
 "DUSOTĀJS" The Angular app shows stations on a Leaflet map. The Spring Boot API stores users, stations, and price suggestions in MongoDB.
@@ -53,7 +55,7 @@ Open http://localhost:4200. The dev server proxies `/api` to http://127.0.0.1:80
 | moderator | Moderator-Demo123 | MODERATOR |
 | user | User-Demo12345 | USER |
 
-These match `backend/.env.example`. Change them in `backend/.env` before the first backend start. Existing usernames are not updated.
+These match `backend/.env.example`. Change them in `backend/.env` before the first backend start. Existing usernames are not updated. These are here purely for demonstration purposes and would not be the same in the full release. The inclusion of the admin user type does not pose any risk, due to it not having any connection to api's or anything of the sort, as the programme is purely local for now.
 
 ## What each role can do
 
@@ -63,6 +65,10 @@ These match `backend/.env.example`. Change them in `backend/.env` before the fir
 
 ## Data
 
-Edit `backend/data/stations.json` to change the starter stations and prices. The backend reloads the file when it changes and replaces the station list in MongoDB. Prices saved through Piedāvājumi stay until the file is edited again.
+Edit `backend/data/stations.json` to change the extra made up prices for some of the stations. The backend reloads the file when it changes and replaces the station list in MongoDB. Prices saved through Piedāvājumi stay until the file is edited again.
 
 `DUS_DATA_FILE` overrides the file path. It defaults to `data/stations.json`, relative to the `backend` directory.
+
+## Documentation
+
+
