@@ -4,7 +4,7 @@
 
 ### Overview
 
-DUS ATLAS ("DUSOTĀJS") is a map of 25 demo fuel stations in Latvia with prices for PETROL_95, PETROL_98, DIESEL and LPG. Logged-in users can suggest a price for a station, and moderators approve or reject those suggestions. The interface is in Latvian. All prices are invented demo data.
+DUS ATLAS ("DUSOTĀJS") is a map of fuel stations in Latvia with prices for PETROL_95, PETROL_98, DIESEL and LPG. Logged-in users can suggest a price for a station, and moderators approve or reject those suggestions. The interface is in Latvian.
 
 ### Architecture
 
