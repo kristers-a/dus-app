@@ -9,7 +9,7 @@ DUS ATLAS ("DUSOTĀJS") is a map of fuel stations in Latvia with prices for PETR
 ### Architecture
 
 ```
-Browser (Angular + Leaflet) → /api (dev proxy) → Spring Boot API → MongoDB
+Browser (Angular + Leaflet) -> /api (dev proxy) -> Spring Boot API -> MongoDB
         localhost:4200                          127.0.0.1:8080     localhost:27017
 ```
 
